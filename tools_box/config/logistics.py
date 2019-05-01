@@ -19,11 +19,6 @@ def get_data():
                     "type": "doctype",
                     "name": "Vehicle Schedule",
                     "description": _("Vehicle Schedule"),
-                },
-                {
-                    "type": "doctype",
-                    "name": "Logistics Planning Tool",
-                    "description": _("Logistics Planning Tool"),
                 }
             ]
         },
@@ -63,18 +58,6 @@ def get_data():
                     "name": "Vehicle Allocation Schedule Report",
                     "route": "query-report/Vehicle Allocation Schedule Report",
                     "doctype": "Vehicle Schedule Log",
-                },
-                {
-                    "type": "report",
-                    "name": "Goods Tracking Report",
-                    "route": "query-report/Goods Tracking Report",
-                    "doctype": "Vehicle Schedule Log",
-                },
-                {
-                    "type": "report",
-                    "name": "Logistics Schedule Report",
-                    "route": "query-report/Logistics Schedule Report",
-                    "doctype": "Sales Order",
                 },
                 {
                     "type": "report",

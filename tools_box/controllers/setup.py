@@ -16,67 +16,11 @@ from frappe.utils import cint, flt, cstr, comma_or
 def get_selling_section():
     return __default_item([{
         "type": "doctype",
-        "label": _("Call Log"),
-        "name": "Call Log",
-        "icon": "icon-sitemap",
-        "link": "List/Call Log",
-        "description": _("Manage Call Log."),
-    }, {
-        "type": "doctype",
-        "label": _("Competitor"),
-        "name": "Competitor",
-        "icon": "icon-sitemap",
-        "link": "List/Competitor",
-        "description": _("Manage Competitors."),
-    }, {
-        "type": "doctype",
-        "label": _("Outlet Survey"),
-        "name": "Outlet Survey",
-        "icon": "icon-sitemap",
-        "link": "List/Outlet Survey",
-        "description": _("Outlet Survey."),
-    }, {
-        "type": "doctype",
         "label": _("Authority to Load"),
         "name": "Authority to Load",
         "icon": "icon-sitemap",
         "link": "List/Authority to Load",
         "description": _("Authority to Load"),
-    }, {
-        "type": "doctype",
-        "label": _("Performance Assessment Form"),
-        "name": "Performance Assessment Form",
-        "icon": "icon-sitemap",
-        "link": "List/Performance Assessment Form",
-        "description": _("Performance Assessment Form."),
-    }, {
-        "type": "doctype",
-        "label": _("Daily Route Activity"),
-        "name": "Daily Route Activity",
-        "icon": "icon-sitemap",
-        "link": "List/Daily Route Activity",
-        "description": _("Daily Route Activity."),
-    }, {
-        "type": "doctype",
-        "label": _("Sales Journey Plan"),
-        "name": "Sales Journey Plan",
-        "icon": "icon-sitemap",
-        "link": "List/Sales Journey Plan",
-        "description": _("Sales Journey Plan."),
-    }, {
-        "type": "doctype",
-        "label": _("Sales Weekly Report"),
-        "name": "Sales Weekly Report",
-        "icon": "icon-sitemap",
-        "link": "List/Sales Weekly Report",
-        "description": _("Sales Weekly Report."),
-    }, {
-        "type": "doctype",
-        "label": _("Sales Weekly Report Setup"),
-        "name": "Sales Weekly Report Config",
-        "icon": "icon-sitemap",
-        "link": "List/Sales Weekly Report Config",
-        "description": _("Sales Weekly Report Config."),
     }])
 
 def get_account_section():
@@ -106,33 +50,12 @@ def get_account_section():
 def get_stock_section():
     return __default_item([{
         "type": "doctype",
-        "label": _("Stock Transfer"),
-        "name": "Stock Transfer",
-        "icon": "icon-sitemap",
-        "link": "List/Stock Transfer",
-        "description": _("Stock Transfer"),
-    },{
-        "type": "doctype",
         "label": _("Quality Control Material Acceptance Form"),
         "name": "Quality Control Material Acceptance Form",
         "icon": "icon-sitemap",
         "link": "List/Quality Control Material Acceptance Form",
         "description": _("Quality Control Material Acceptance Form"),
-    }, {
-        "type": "doctype",
-        "label": _("Store Bin Card"),
-        "name": "Store Bin Card",
-            "icon": "icon-sitemap",
-        "link": "List/Store Bin Card",
-        "description": _("Store Bin Card"),
-    },{
-        "type": "doctype",
-        "label": _("Stationaries Request"),
-        "name": "Stationaries Request",
-        "icon": "icon-sitemap",
-        "link": "List/Stationaries Request",
-        "description": _("Stationaries Request"),
-    } ])
+    }])
 
 def get_production_section():
     return __default_item([{
@@ -153,42 +76,9 @@ def get_production_section():
     ], label="Additional")
 
 def get_waste_section():
-    return __default_item([{
-        "type": "doctype",
-        "label": _("Production Waste"),
-        "name": "Production Waste",
-        "icon": "icon-sitemap",
-        "link": "List/Production Waste",
-        "description": _("Production Waste"),
-    }, {
-        "type": "doctype",
-        "label": _("Waste Sold"),
-        "name": "Production Waste",
-        "icon": "icon-sitemap",
-        "link": "List/Sold Waste",
-        "description": _("Sold Waste"),
-    }, {
-        "type": "doctype",
-        "label": _("Waste Control Inspection"),
-        "name": "Waste Control Inspection",
-        "icon": "icon-sitemap",
-        "link": "List/Waste Control Inspection",
-        "description": _("Waste Control Inspection"),
-    }, {
-        "type": "doctype",
-        "label": _("Production Waste Setup"),
-        "name": "Production Waste Setup",
-        "icon": "icon-sitemap",
-        "link": "List/Production Waste Setup",
-        "description": _("Production Waste Setup"),
-    }, {
-        "type": "doctype",
-        "label": _("Machine Downtime Monitoring"),
-        "name": "Machine Downtime Monitoring",
-        "icon": "icon-sitemap",
-        "link": "List/Machine Downtime Monitoring",
-        "description": _("Machine Downtime Monitoring"),
-    }], label="Production Waste")
+    return __default_item([
+
+    ], label="Production Waste")
 
 def get_maintenance_section():
     return __default_item([
@@ -199,14 +89,6 @@ def get_maintenance_section():
             "icon": "icon-sitemap",
             "link": "List/Equipment Support",
             "description": _("Equipment Support"),
-        },
-        {
-            "type": "doctype",
-            "label": _("Work Order"),
-            "name": "Work Order",
-            "icon": "icon-sitemap",
-            "link": "List/Work Order",
-            "description": _("Work Order"),
         },
         {
             "type": "doctype",
@@ -409,51 +291,13 @@ def get_extra_hr_reports():
         }, ])
 
 def get_extra_waste_reports():
-    return __default_rep_items([{
-        "type": "report",
-        "name": "Production Waste Report",
-        "doctype": "Production Waste",
-        "is_query_report": True,
-    }, {
-        "type": "report",
-        "name": "Sold Waste Report",
-        "doctype": "Sold Waste",
-        "label": "Waste Sold Report",
-        "is_query_report": True,
-    }
+    return __default_rep_items([
+
     ], label="Production Waste Reports")
 
 def get_extra_production_reports():
     return __default_rep_items([
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Items Flow Report",
-            "doctype": "Stock Entry",
-        },
-        {
-            "type": "report",
-            "name": "Finished Goods Transfer Report",
-            "doctype": "Finished Goods Transfer Form",
-            "is_query_report": True,
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Raw material re-order Report",
-            "doctype": "Item",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Raw Materials Return Report",
-            "doctype": "Raw Materials Return Form",
-        }, {
-            "type": "report",
-            "name": "Production Yield Variance Report",
-            "doctype": "Production Order",
-            "is_query_report": True,
-        },
+
     ])
 
 def get_extra_maintenance_reports():
@@ -535,78 +379,6 @@ def get_extra_selling_reports():
     return __default_rep_items([
         {
             "type": "report",
-            "name": "Call Log Report",
-            "is_query_report": True,
-            "doctype": "Call Log",
-        },
-        {
-            "type": "report",
-            "name": "Daily Route Activity Report",
-            "route": "query-report/Daily Route Activity Report",
-            "doctype": "Daily Route Activity",
-        },
-        {
-            "type": "report",
-            "name": "Customer Commission Report",
-            "route": "query-report/Customer Commission Report",
-            "doctype": "Sales Invoice",
-        },
-        {
-            "type": "report",
-            "name": "Customer Commission Report Simplified",
-            "route": "query-report/Customer Commission Report Simplified",
-            "doctype": "Sales Invoice",
-        },
-        {
-            "type": "report",
-            "name": "Sales Rep Scorecard Report",
-            "route": "query-report/Sales Rep Scorecard Report",
-            "doctype": "Sales Invoice",
-        },
-        {
-            "type": "report",
-            "name": "Sales Weekly Report",
-            "route": "query-report/Sales Weekly Report",
-            "doctype": "Sales Weekly Report",
-        },
-        {
-            "type": "report",
-            "name": "Outlet Survey Report",
-            "route": "query-report/Outlet Survey Report",
-            "doctype": "Outlet Survey",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Product Delivery & Distribution Schedule Report",
-            "doctype": "Sales Order"
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Distribution Schedule Report",
-            "doctype": "Sales Order"
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Sales By Product Report",
-            "doctype": "Sales Invoice"
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Sales By Product Report Summary",
-            "doctype": "Sales Order"
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Sales By Product Report Adjusted",
-            "doctype": "Sales Invoice"
-        },
-        {
-            "type": "report",
             "is_query_report": True,
             "name": "Inactive Customers",
             "doctype": "Sales Order"
@@ -619,20 +391,9 @@ def get_extra_selling_reports():
         },
         {
             "type": "report",
-            "name": "Sales Person-wise Transaction Summary",
-            "doctype": "Sales Order",
             "is_query_report": True,
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Sales Variance Report",
-            "doctype": "Sales order"
-        }, {
-            "type": "report",
-            "name": "Overdue Sales Invoice",
-            "doctype": "Sales Invoice",
-            "is_query_report": True,
+            "name": "Customer Ranking Report",
+            "doctype": "Customer"
         }])
 
 def get_extra_purchase_reports():
@@ -670,78 +431,12 @@ def get_extra_purchase_reports():
             "is_query_report": True,
             "name": "Purchase Requisition Report",
             "doctype": "Purchase Requisition"
-        },
-
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Material Request Report",
-            "doctype": "Material Request"
         }
     ])
 
 def get_extra_stock_reports():
     return __default_rep_items([
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Stock Ledger v2",
-            "doctype": "Stock Ledger Entry",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Stock Ledger Simplified",
-            "doctype": "Stock Ledger Entry",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Store Bin Cards Report",
-            "doctype": "Store Bin Card",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Stock Count Report",
-            "doctype": "Stock Ledger Entry",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Material Receipt List Report",
-            "doctype": "Purchase Receipt",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Stock Valuation Report",
-            "doctype": "Stock Ledger Entry",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Failed Repack Report",
-            "doctype": "Stock Entry",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Stock Balance With Valuation",
-            "doctype": "Stock Entry",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Items Flow Report",
-            "doctype": "Stock Entry",
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Stock Balance Simplified",
-            "doctype": "Stock Entry",
-        }
+
     ])
 
 def get_extra_support_reports():
