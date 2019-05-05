@@ -8,4 +8,3 @@ Logistics
 _Maintenance
 _HR
 _Buying
-Book Publishing

@@ -26,20 +26,6 @@ def get_selling_section():
 def get_account_section():
     return __default_item([{
         "type": "doctype",
-        "label": _("Petty Cash Log"),
-        "name": "Petty Cash Log",
-        "icon": "icon-sitemap",
-        "link": "List/Petty Cash Log",
-        "description": _("Petty Cash Log"),
-    }, {
-        "type": "doctype",
-        "label": _("Payment Voucher Form"),
-        "name": "Payment Voucher Form",
-        "icon": "icon-sitemap",
-        "link": "List/Payment Voucher Form",
-        "description": _("Payment Voucher Form"),
-    }, {
-        "type": "doctype",
         "label": _("Asset Transfer Form"),
         "name": "Asset Transfer Form",
         "icon": "icon-sitemap",
@@ -58,21 +44,7 @@ def get_stock_section():
     }])
 
 def get_production_section():
-    return __default_item([{
-        "type": "doctype",
-        "label": _("Raw Materials Return Form"),
-        "name": "Raw Materials Return Form",
-        "icon": "icon-sitemap",
-        "link": "List/Raw Materials Return Form",
-        "description": _("Raw Materials Return Form"),
-    }, {
-        "type": "doctype",
-        "label": _("Finished Goods Transfer Form"),
-        "name": "Finished Goods Transfer Form",
-        "icon": "icon-sitemap",
-        "link": "List/Finished Goods Transfer Form",
-        "description": _("Finished Goods Transfer Form"),
-    },
+    return __default_item([
     ], label="Additional")
 
 def get_waste_section():
@@ -341,39 +313,7 @@ def get_extra_maintenance_reports():
     ])
 
 def get_extra_account_reports():
-    return __default_rep_items([
-        {
-
-            "type": "report",
-            "name": "Bank Balance Report",
-            "doctype": "Journal Entry",
-            "is_query_report": True,
-        }, {
-
-            "type": "report",
-            "name": "Payment Voucher Report",
-            "doctype": "Payment Voucher Form",
-            "is_query_report": True,
-        }, {
-
-            "type": "report",
-            "name": "Payment Entry Report",
-            "doctype": "Payment Entry",
-            "is_query_report": True,
-        }, {
-
-            "type": "report",
-            "name": "Product Cost Of Sales Report",
-            "doctype": "Delivery Note",
-            "is_query_report": True,
-        }, {
-
-            "type": "report",
-            "name": "Petty Cash Log Report",
-            "doctype": "Petty cash Log",
-            "is_query_report": True,
-        }
-    ])
+    return __default_rep_items([])
 
 def get_extra_selling_reports():
     return __default_rep_items([
@@ -406,18 +346,7 @@ def get_extra_purchase_reports():
         }, {
             "type": "report",
             "is_query_report": True,
-            "name": "Purchase Order Status Report",
-            "doctype": "Purchase Order Status"
-        }, {
-            "type": "report",
-            "is_query_report": True,
             "name": "Purchase by Items Report Summary",
-            "doctype": "Purchase Invoice"
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Purchase by Items Report Details",
             "doctype": "Purchase Invoice"
         },
         {
