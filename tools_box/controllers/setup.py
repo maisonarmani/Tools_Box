@@ -338,29 +338,6 @@ def get_extra_selling_reports():
 
 def get_extra_purchase_reports():
     return __default_rep_items([
-        {
-            "type": "report",
-            "name": "Overdue Purchase Invoice",
-            "doctype": "Purchase Invoice",
-            "is_query_report": True,
-        }, {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Purchase by Items Report Summary",
-            "doctype": "Purchase Invoice"
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Purchase Order Summary Report",
-            "doctype": "Purchase Order"
-        },
-        {
-            "type": "report",
-            "is_query_report": True,
-            "name": "Purchase Requisition Report",
-            "doctype": "Purchase Requisition"
-        }
     ])
 
 def get_extra_stock_reports():
