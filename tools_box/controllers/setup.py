@@ -320,20 +320,17 @@ def get_extra_selling_reports():
         {
             "type": "report",
             "is_query_report": True,
-            "name": "Inactive Customers",
-            "doctype": "Sales Order"
+            "name": "Sales By Customer",
+            "label": "Sales By Customer (Top 50)"
         },
         {
             "type": "report",
             "is_query_report": True,
-            "name": "Customer Credit Balance",
-            "doctype": "Customer"
-        },
-        {
+            "name": "Sales By Product"
+        },{
             "type": "report",
             "is_query_report": True,
-            "name": "Customer Ranking Report",
-            "doctype": "Customer"
+            "name": "Sales Representative Scorecard"
         }])
 
 def get_extra_purchase_reports():
@@ -342,7 +339,22 @@ def get_extra_purchase_reports():
 
 def get_extra_stock_reports():
     return __default_rep_items([
-
+        {
+            "type": "report",
+            "is_query_report": True,
+            "name": "Raw Material Valuation",
+            "doctype": "Stock Ledger Entry"
+        },{
+            "type": "report",
+            "is_query_report": True,
+            "name": "Finished Goods Valuation",
+            "doctype": "Stock Ledger Entry"
+        },{
+            "type": "report",
+            "is_query_report": True,
+            "name": "Stock Balance Summary",
+            "doctype": "Stock Ledger Entry"
+        }
     ])
 
 def get_extra_support_reports():

@@ -12,6 +12,14 @@ def get_data():
 			"label": _("Safety and Compliance")
 		},
 		{
+			"module_name": "Management Report",
+			"color": "#2c3e52",
+			"icon": "fa fa-phone",
+			"icon": "octicon octicon-issue-opened",
+			"type": "module",
+			"label": _("Management Report")
+		},
+		{
 			"module_name": "Logistics",
 			"color": "#e7c016",
 			"icon": "octicon octicon-dashboard",
@@ -25,5 +33,5 @@ def get_data():
 			"icon": "octicon octicon-issue-opened",
 			"type": "module",
 			"label": _("Support")
-		},
+		}
 	]

@@ -8,3 +8,4 @@ Logistics
 _Maintenance
 _HR
 _Buying
+Management Report

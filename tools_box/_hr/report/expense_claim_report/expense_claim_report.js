@@ -20,6 +20,12 @@ frappe.query_reports["Expense Claim Report"] = {
             options: "User"
         },
         {
+            fieldname: "employee",
+            label: __("Employee"),
+            fieldtype: "Link",
+            options: "Employee"
+        },
+        {
             fieldname: "expense_type",
             label: __("Expense Claim Type"),
             fieldtype: "Link",

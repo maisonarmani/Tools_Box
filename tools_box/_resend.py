@@ -46,3 +46,26 @@ def update_shared():
     for index, user in enumerate(users):
         frappe.share.add("Employee", emps[index], user, read=1, share=1)
 
+
+
+
+def update_permissions():
+    employees = frappe.get_all("Employee", filters={"status": "Active"},fields=['user_id','name'])
+    users = [[emp.user_id, emp.name] for emp in employees]
+
+    for index, user in enumerate(users):
+        _employee = user[1]
+        _user = user[0]
+        if _user is not None:
+            user_permssion = frappe.new_doc("User Permission")
+            user_permssion.allow = "Employee"
+            user_permssion.user = _user
+            user_permssion.for_value = _employee
+            user_permssion.apply_to_all_doctypes = 0
+            user_permssion.applicable_for = "Salary Slip"
+
+            try:
+                user_permssion.save(ignore_permissions=True)
+            except frappe.exceptions.DuplicateEntryError as exp:
+                frappe.errprint("Another Duplicate")
+            #user_permssion.submit(ignore_permissions=True)

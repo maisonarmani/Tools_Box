@@ -5,6 +5,10 @@ from __future__ import unicode_literals
 import frappe
 from frappe import _
 
+from frappe.model.utils import get_fetch_values
+from frappe.model.mapper import get_mapped_doc
+from frappe.utils import cstr, flt, getdate, comma_and, cint, nowdate, add_days
+
 
 import datetime
 from frappe import sendmail
@@ -76,3 +80,41 @@ def resolve_work_order(docname):
                   " where name = '%s'" % (datetime.datetime.now(), frappe.session.user,docname))
     frappe.msgprint(_("Work Order has been {0}").format(status))
     return True
+
+
+
+@frappe.whitelist()
+def get_discount(customer, transation_date):
+	d = getdate(transation_date)
+
+	ds_status = frappe.db.sql("SELECT entitled_discount_ FROM `tabCustomer` WHERE"
+								   " name= '{1}' AND DATE('{0}') >= discount_start  AND DATE('{0}') <= discount_end".format(d,customer))
+	if ds_status:
+		return ds_status[0][0]
+	else:
+		return 0
+
+@frappe.whitelist()
+def make_authority_to_load(source_name, target_doc=None):
+		def set_missing_values(source, target):
+			target.sales_order = source.name
+
+		def update_item(source_doc, target_doc, source_parent):
+			pass
+
+		doc = get_mapped_doc("Sales Order", source_name, {
+			"Sales Order": {
+				"doctype": "Authority to Load",
+				"validation": {
+					"docstatus": ["=", 1]
+				},
+				"field_map": {
+					"sales_order":"name"
+				},
+				"add_if_empty": False,
+				"postprocess": update_item,
+				"condition": lambda doc: doc.docstatus == 1
+			},
+		}, target_doc, set_missing_values)
+
+		return doc
