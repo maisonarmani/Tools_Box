@@ -37,7 +37,7 @@ class TestFireExtinguisher(unittest.TestCase):
 	def _test_fire_acccide_report(self):
     		
 		filters = {
-			'prepared_from':datetime.date(2017,01,13),
+			'prepared_from':datetime.date(2017,1,13),
 			'prepared_to':datetime.date(2017,1,30),
 			'fire_extinguisher':'GTRC-1001',
 			'nature_of_accident':'Fatal'

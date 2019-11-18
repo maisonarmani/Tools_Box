@@ -47,8 +47,8 @@ class TestAccidentReportForm(unittest.TestCase):
     def tt_employee_status(self):
         ## Test
         filters = dict(
-            from_date=datetime(2016, 01, 01),
-            to_date=datetime(2016, 12, 01),
+            from_date=datetime(2016, 1, 1),
+            to_date=datetime(2016, 12, 1),
             status="Left",
             employment_type="Full-time"
         )

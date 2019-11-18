@@ -14,7 +14,7 @@ def execute(filters=None):
 		conditions += " AND vs.date <= %(to_date)s"
 	if filters.get("customer"):
 		conditions += " AND dn.customer = %(customer)s"
-        if filters.get("delivery_status"):
-                conditions += " AND vsd.delivery_status = %(delivery_status)s"
-        data = frappe.db.sql("SELECT vsd.delivery_note,dn.customer,vs.vehicle,vs.driver,vsd.delivery_status FROM `tabVehicle Schedule Log` vs LEFT JOIN `tabVehicle Schedule Delivery` vsd ON (vs.name = vsd.parent) LEFT JOIN `tabDelivery Note` dn ON (vsd.delivery_note = dn.name) WHERE vs.docstatus=1 {0}".format(conditions),filters)
-        return columns, data
+	if filters.get("delivery_status"):
+		conditions += " AND vsd.delivery_status = %(delivery_status)s"
+	data = frappe.db.sql("SELECT vsd.delivery_note,dn.customer,vs.vehicle,vs.driver,vsd.delivery_status FROM `tabVehicle Schedule Log` vs LEFT JOIN `tabVehicle Schedule Delivery` vsd ON (vs.name = vsd.parent) LEFT JOIN `tabDelivery Note` dn ON (vsd.delivery_note = dn.name) WHERE vs.docstatus=1 {0}".format(conditions),filters)
+	return columns, data

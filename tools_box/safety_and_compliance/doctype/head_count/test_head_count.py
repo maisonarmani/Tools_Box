@@ -21,7 +21,7 @@ def unknown(self):
     # import inspect
     # print(inspect.getargspec(frappe.get_all))
     import datetime
-    date = datetime.datetime(2017, 11, 02)
+    date = datetime.datetime(2017, 11, 2)
     print(
         frappe.get_all("Head Count", fields=[
             "name", 'modified'

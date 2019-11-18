@@ -16,7 +16,7 @@ class TestRequestType(unittest.TestCase):
         conditions = ""
         filters = dict(
             from_date=date(2014, 1, 1),
-            to_date=date(2017, 03, 31),
+            to_date=date(2017, 3, 31),
             #warehouse='Princess Finished Goods - GCL',
             #item_group='Princess',
             #item_code='GCL0014',
