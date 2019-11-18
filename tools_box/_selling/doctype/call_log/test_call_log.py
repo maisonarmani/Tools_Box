@@ -102,5 +102,5 @@ def get_base_files():
     user = user = "mercy.jimah@graceco.com.ng"
     data= db.sql("select file_name, file_url, old_parent from `tabFile` where ({}) and (old_parent = '{base}')"
                  .format(get_permission_query_conditions_for_file(user), base="Home"), as_dict= 1)
-    print data
+    print(data)
 

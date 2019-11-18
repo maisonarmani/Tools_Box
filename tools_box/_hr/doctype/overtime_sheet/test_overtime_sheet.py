@@ -49,5 +49,5 @@ def testCOA():
 	sql6 = "select voucher_no, count(voucher_no) from `tabGL Entry` where  voucher_type='Sales Invoice' and posting_date between date('2017-01-01') " \
 		  "and date('2017-10-30') AND account IN {s} GROUP BY voucher_no HAVING COUNT(*) > 1".format(s=str(s_accs))
 
-	print sql4
-	print frappe.db.sql(sql4)
+	print (sql4)
+	print (frappe.db.sql(sql4))

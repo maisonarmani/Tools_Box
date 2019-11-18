@@ -9,7 +9,7 @@ def resend():
         as_list=1)
     for datum in data:
         retry_sending(datum[0])
-    print data
+    print(data)
 
 
 def set_employee():
