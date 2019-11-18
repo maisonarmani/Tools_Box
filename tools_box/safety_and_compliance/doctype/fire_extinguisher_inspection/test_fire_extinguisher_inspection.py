@@ -17,7 +17,7 @@ class TestFireExtinguisher(unittest.TestCase):
 	def _test_outlet(self):
 		conditions = ""
 		filters = dict(
-			from_date = datetime.datetime(2016,01,01),
+			from_date = datetime.datetime(2016,1,1),
 			to_date = datetime.datetime(2017,1,30)
 		)
 		if filters.get("from_date"):

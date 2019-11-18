@@ -74,8 +74,8 @@ class TestAccidentReportForm(unittest.TestCase):
 
     def tes1_get_data(self):
         filters = dict(
-            from_date=datetime(2016, 01, 01),
-            to_date=datetime(2016, 12, 01),
+            from_date=datetime(2016, 1, 1),
+            to_date=datetime(2016, 12, 1),
             gender="Female",
             employment_type="Full-time",
             leave_type="Annual",
