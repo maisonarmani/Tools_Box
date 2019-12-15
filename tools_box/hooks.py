@@ -60,11 +60,6 @@ app_license = "MIT"
 # Permissions evaluated in scripted ways
 
 permission_query_conditions = {
-    "Sales Invoice" : "tools_box.tools_box.doctype.administrative_zone_setup.administrative_zone_setup.get_permission_query_conditions_for_sales_invoice",
-    "Sales Order" : "tools_box.tools_box.doctype.administrative_zone_setup.administrative_zone_setup.get_permission_query_conditions_for_sales_order",
-    "Delivery Note" : "tools_box.tools_box.doctype.administrative_zone_setup.administrative_zone_setup.get_permission_query_conditions_for_del_note",
-    "Authority to Load" : "tools_box.tools_box.doctype.administrative_zone_setup.administrative_zone_setup.get_permission_query_conditions_for_atl",
-    "Customer" : "tools_box.tools_box.doctype.administrative_zone_setup.administrative_zone_setup.get_permission_query_conditions_for_customer",
 }
 
 standard_portal_menu_items = [
