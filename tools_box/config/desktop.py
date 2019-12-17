@@ -14,10 +14,16 @@ def get_data():
 		{
 			"module_name": "Management Report",
 			"color": "#2c3e52",
-			"icon": "fa fa-phone",
-			"icon": "octicon octicon-issue-opened",
+			"icon": "octicon octicon-hubot",
 			"type": "module",
 			"label": _("Management Report")
+		},
+		{
+			"module_name": "Tools Box",
+			"color": "#2c3e52",
+			"icon": "octicon octicon-hubot",
+			"type": "module",
+			"label": _("Graceco Customization")
 		},
 		{
 			"module_name": "Logistics",

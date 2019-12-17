@@ -46,14 +46,14 @@ def get_data():
             "label": _("Selling"),
             "items": [
                 {
-                    "type": "report",
-                    "is_query_report": True,
+                    "type": "doctype",
+                    "is_query_report": False,
                     "name": "Authority to Load",
                     "label": "Authority to Load"
                 },
                 {
-                    "type": "report",
-                    "is_query_report": True,
+                    "type": "doctype",
+                    "is_query_report": False,
                     "name": "Call Log",
                     "label": "Call Log"
                 },
